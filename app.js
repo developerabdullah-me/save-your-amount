@@ -1,53 +1,57 @@
+// function
 function getInputValue(inputId) {
 const incomesInput=document.getElementById(inputId).value;
-  if(isNaN(incomesInput)){
-    return alert('abdullah tumi valhye jao');
-   
+//   error handling 
+if(isNaN(incomesInput) || (incomesInput) < 0){
+    return alert('please look your input fild'); 
  }
- return incomesInput;
-     
-}
+ return incomesInput;    
 
+}
+// calclaute buttons section
 document.getElementById('calclaute').addEventListener('click', function(){
-    /*  const incomes=document.getElementById('income').value; */
+    // get id of cal
     const incomes=getInputValue('income');
-    //  incomes.value;
     const inputFood=getInputValue('food');
     const inputRent=getInputValue('rent');
     const inputclothes=getInputValue('clothes');
-     /* const inputFood=document.getElementById('food').value;
-     const inputRent=document.getElementById('rent').value;
-     const inputclothes=document.getElementById('clothes').value; */
+    // totalCalclaute
      const totalCalclaute=parseFloat(inputFood)+parseFloat(inputRent)+parseFloat(inputclothes);
-    // console.log(totalCalclaute);
-   
-   
-   
+    //  totaltalExpenses
     const totaltalExpenses=document.getElementById('totaltal-expenses');
     totaltalExpenses.innerText = totalCalclaute;
-    //  const b=incomes-totaltalExpenses;
-     let p=document.getElementById('balance');
-     p.innerText=incomes-totaltalExpenses.innerText;
+     let balanceInput=document.getElementById('balance');
+    //  totaltalExpenses minus to incomes
+     balanceInput.innerText=incomes-totaltalExpenses.innerText;
+    //  error handling
+     if (balanceInput.innerText < 0) {
+        return alert('Your expensess not available')
+    };
      
 })
 
+// save amount section
 document.getElementById('save-btn').addEventListener('click',function(){
      const incomes=document.getElementById('income').value;
-     const k=document.getElementById('save').value;
-
-     let e= parseFloat(incomes / 100)*parseFloat(k);
-
-    
-     const s = document.getElementById('saving-amount');
-        s.innerText=e;
-
-        let p=document.getElementById('balance');
-         p.innerText;
-       const saveMinus= parseFloat(p.innerText)-parseFloat(s.innerText);
-
-        const d=document.getElementById('remening-balance')
-            d.innerText=saveMinus;
-    //  const saveparsent=document.getElementById('save-parsent').innerText;
+    //  saveInput
+     const saveInput=document.getElementById('save').value;
+    //  totalSave amount section
+     let totalSave= parseFloat(incomes / 100)*parseFloat(saveInput);
+    //  savingAmount
+     const savingAmount = document.getElementById('saving-amount');
+     savingAmount.innerText=totalSave;
+    //  balanceInnerText
+        let balanceInnerText=document.getElementById('balance');
+         balanceInnerText.innerText;
+        //  save amount Minus 
+       const saveMinus= parseFloat(balanceInnerText.innerText)-parseFloat(savingAmount.innerText);
+        //remening-balance
+        const remeningBalance=document.getElementById('remening-balance')
+            remeningBalance.innerText=saveMinus;
+                 //  error handling
+            if (remeningBalance.innerText < 0) {
+                return alert('please look your incomes amount')
+            }
     
 })
 
