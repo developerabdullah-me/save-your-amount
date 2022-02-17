@@ -13,35 +13,35 @@
             
     <header class=" mt-5 "><h1 class="text-5xl  text-center">Income and expenses</h1></header>
      <!-- main section -->
-    <main class="w-3/4 mx-auto">
+    <main class="w-3/4 mx-auto mt-5">
         <div class="grid md:grid-cols-1 lg:grid-cols-2 gap-7 ">
             <div class=""><img src="image/m.png" alt=""></div>
              <!-- ----------------
                  income section 
             -------------------->
-            <div class="text-center bg-slate-100">
-                 <h1>income</h1>
+            <div class="text-center bg-slate-100 p-5">
+                 <h1 class="text-3xl">income</h1>
                  <div class="">
                    <p><span class="">Income:</span><input id="income" class="bg-slate-200 p-3 mb-2 font-bold w-3/4"  type="text" placeholder="type your incom amount"></p>
-                    <h1>Expenses
+                    <h1 class="text-2xl">Expenses
                     </h1>
                    <p><span class="px-3">Food:</span><input id="food" class="bg-slate-200 p-3 mb-2 font-bold w-3/4" type="text" placeholder="type your food amount"></p>
                    <p><span class="px-3">Rent:</span><input id="rent" class="bg-slate-200 p-3 mb-2 font-bold w-3/4"  type="text" placeholder="type your rent amount"></p>
                   <p><span class="">Clothes:</span><input id="clothes" class="bg-slate-200 p-3 mb-2 font-bold w-3/4 px-3"  type="text" placeholder="type your clothes amount"></p>
-                    <button id="calclaute" class="bg-cyan-500 py-2 px-3 font-bold">Calculate</button>
-                   <h1 class="text-3xl">Total Expenses:<span id="totaltal-expenses">000</span></h1>
-                   <h1 class="text-3xl">Balance:<span id="balance">000</span></h1>
+                    <button id="calclaute" class="bg-cyan-500 py-2 px-3 font-bold my-2">Calculate</button>
+                   <h1 class="text-3xl">Total Expenses:<span class="font-bold"  id="totaltal-expenses">000</span></h1>
+                   <h1 class="text-3xl">Balance:<span class="font-bold"  id="balance">000</span></h1>
                 </div>
                  <!-------------------------
                      Saving Amount section 
                 ------------------------->
                 <div class="">
-                    <p>Save:</p>
+                    <p class="py-3">Save:
                     <input id="save" class="bg-slate-200 p-3 mb-2 font-bold "type="text" placeholder="type your Saving Amount">
-                    <span id="save-parsent">%</span>
-                    <button id="save-btn" class="bg-cyan-500 py-2 px-3 font-bold">save</button>
-                    <h1>Saving Amount:<span id="saving-amount">2000</span></h1>
-                    <h1>Remaining Balance:<span id="remening-balance">2000</span></h1>
+                    <span class="font-bold" id="save-parsent">%</span>
+                    <button id="save-btn" class="bg-cyan-500 py-2 px-4 font-bold">save</button></p>
+                    <h1 class="text-3xl">Saving Amount:<span class="font-bold" id="saving-amount">2000</span></h1>
+                    <h1 class="text-3xl">Remaining Balance:<span class="font-bold" id="remening-balance">2000</span></h1>
                 </div>
             </div>
         </div>

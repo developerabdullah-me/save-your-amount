@@ -25,7 +25,7 @@ document.getElementById('calclaute').addEventListener('click', function(){
      balanceInput.innerText=incomes-totaltalExpenses.innerText;
     //  error handling
      if (balanceInput.innerText < 0) {
-        return alert('Your expensess not available')
+        return alert('Your expensess incomes not available')
     };
      
 })
