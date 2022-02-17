@@ -1,12 +1,29 @@
+function getInputValue(inputId) {
+const incomesInput=document.getElementById(inputId).value;
+  if(isNaN(incomesInput)){
+    return alert('abdullah tumi valhye jao');
+   
+ }
+ return incomesInput;
+     
+}
+
 document.getElementById('calclaute').addEventListener('click', function(){
-     const incomes=document.getElementById('income').value;
+    /*  const incomes=document.getElementById('income').value; */
+    const incomes=getInputValue('income');
     //  incomes.value;
-     const inputFood=document.getElementById('food').value;
+    const inputFood=getInputValue('food');
+    const inputRent=getInputValue('rent');
+    const inputclothes=getInputValue('clothes');
+     /* const inputFood=document.getElementById('food').value;
      const inputRent=document.getElementById('rent').value;
-     const inputclothes=document.getElementById('clothes').value;
+     const inputclothes=document.getElementById('clothes').value; */
      const totalCalclaute=parseFloat(inputFood)+parseFloat(inputRent)+parseFloat(inputclothes);
     // console.log(totalCalclaute);
-   const totaltalExpenses=document.getElementById('totaltal-expenses');
+   
+   
+   
+    const totaltalExpenses=document.getElementById('totaltal-expenses');
     totaltalExpenses.innerText = totalCalclaute;
     //  const b=incomes-totaltalExpenses;
      let p=document.getElementById('balance');
